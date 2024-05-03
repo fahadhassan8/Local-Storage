@@ -1,0 +1,61 @@
+@font-face {
+    font-family: regular;
+    src: url(./assets/fonts/JosefinSans-Regular.ttf);
+}
+@font-face {
+    font-family: bold;
+    src: url(./assets/fonts/JosefinSans-SemiBold.ttf);
+}
+body{
+    background-color:#efefef;
+}
+.sign-up, .login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-align: center;
+    min-height: 90vh;
+    width: auto;
+}
+h1{
+    font-size: 2.5em;
+    font-family: bold;
+}
+input{
+    background-color: #fdfdfdd9;
+    font-family: regular;
+    font-size: 1em;
+    outline: none;
+    padding: 1em;
+    width: 21em;
+    border: 1px solid #524f4f33;
+}
+input:hover{
+    box-shadow: 0 0 0 2px #285192;
+    transition: all 2s ease-out;
+}
+button{
+    background-color: #285192;
+    color: #fff;
+    font-family: regular;
+    font-size: 1.1em;
+    outline: none;
+    padding: 0.5em;
+    width: 21em;
+}
+@media (max-width:390px) {
+    h1{
+        font-size: 2em;
+    }
+    input{
+        font-size: 1em;
+        padding: 0.8em;
+        width: 90%;
+    }   
+    button{
+        font-size: 1em;
+        width: 100%;
+    }
+}
