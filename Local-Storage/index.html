@@ -3,11 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Signup-Form</title>
 </head>
 <body>
-    
+    <section class="sign-up">
+        <h1>Signup</h1>
+        <input type="text" id="signup-name"><br>
+        <input type="text" id="signup-email"><br>
+        <input type="password" id="signup-paswrd"><br>
+        <button onclick="sign_up()">signup</button>
+    </section>
+    <section class="login">
+        <input type="text" id="login-email"><br>
+        <input type="text" id="login-paswrd"><br>
+        <button>Login</button>
+    </section>
+    <script>
+        let signUp = document.querySelector('.sign-up');
+        let login = document.querySelector('.login');
+        login.style.display = 'none';
 
-    <script src="app.js"></script>
+        let sign_up = () =>{
+            let signUpName = document.getElementById('signup-name').value;
+            let signUpEmail = document.getElementById('signup-email').value;
+            let signUpPassword = document.getElementById('signup-paswrd').value;
+            localStorage.setItem('users', JSON.stringify({signup_name:signUpName,
+                signup_email:signUpEmail, signup_password:signUpPassword
+            }));
+            signUp.style.display = 'none';
+            login.style.display = 'block';
+        }
+        let login_page = () => {
+            let loginEmail = document.getElementById('login-email');
+            let loginPassword = document.getElementById('login-login-paswrd');
+            
+        }
+    </script>
 </body>
 </html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section id="signup">
+      <h2>Signup</h2>
+      <input type="text" name="" id="user" /><br>
+      <input type="email" name="" id="signemail" /><br>
+      <input type="password" name="" id="signpass" /><br>
+      <button onclick="signup()">signup</button>
+    </section>
+
+    <section id="login">
+        <h2>Login</h2>
+        <input type="email" name="" id="logemail" /><br>
+        <input type="password" name="" id="logpass" /><br>
+        <button>Login</button>
+      </section>
+  <script>
+let login = document.getElementById("login");
+let signUp = document.getElementById("signup");
+login.style.display = "none";
+
+function signup() {
+
+let user = document.getElementById("user").value
+let sigemail = document.getElementById("signemail").value
+let sigpass = document.getElementById("signpass").value
+localStorage.setItem("users", JSON.stringify({userName: user, sign:sigemail, pass:sigpass}))
+
+
+}
+
+  </script>
+    <script src="app.js"></script>
+  </body>
+</html> -->
