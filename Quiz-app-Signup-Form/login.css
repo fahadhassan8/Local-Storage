@@ -30,6 +30,7 @@ input{
     outline: none;
     padding: 1em;
     width: 21em;
+    border-radius: 3px;
     border: 1px solid #524f4f33;
 }
 input:hover{
@@ -42,10 +43,16 @@ button{
     font-family: regular;
     font-size: 1.1em;
     outline: none;
+    border: none;
+    border-radius: 3px;
     padding: 0.5em;
     width: 21em;
 }
 @media (max-width:390px) {
+    .sign-up, .login{
+        gap: 0px;
+        min-height: 80vh;
+    }
     h1{
         font-size: 2em;
     }
